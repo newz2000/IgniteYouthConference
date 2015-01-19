@@ -1,10 +1,10 @@
-ts	1421689042000
+ts	1421690147000
 Default-Landscape.png	446500
 Default-Portrait.png	56963
 Default.png	87123
 KS_nav_ui.png	748
 KS_nav_views.png	683
-app.js	245
+app.js	199
 appicon.png	16659
 appicon144.png	23341
 apple-touch-icon-114x114-precomposed.png	15820
@@ -181,7 +181,7 @@ webview
 		glyphicons-halflings-regular.svg	62926
 		glyphicons-halflings-regular.ttf	41280
 		glyphicons-halflings-regular.woff	23320
-	index.html	3466
+	index.html	2834
 	js
 		bootstrap.js	67155
 		bootstrap.min.js	35601
