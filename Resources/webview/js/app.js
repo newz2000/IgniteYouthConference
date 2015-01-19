@@ -6,16 +6,15 @@ var AppRouter = Backbone.Router.extend({
         '*default': 'home'
     },
     getEvent: function(id) {
-      console.log('event');
       var _template = _.template(
         $('#eventTemplate').html()
       );
 
-      // $('#dummyDom').html(_template( {
-      //   event: {
-      //     id: id
-      //   }
-      // }));
+      $('#dummyDom').html(_template( {
+        event: {
+          id: id
+        }
+      }));
     },
 
     socialRoute: function() {
@@ -44,8 +43,12 @@ var AppRouter = Backbone.Router.extend({
 
 });
 
-// Instantiate the router
-var app_router = new AppRouter;
+$(document).ready(function() {
 
-// Start Backbone history a necessary step for bookmarkable URL's
-Backbone.history.start();
+  // Instantiate the router
+  var app_router = new AppRouter;
+
+  // Start Backbone history a necessary step for bookmarkable URL's
+  Backbone.history.start();
+
+})
