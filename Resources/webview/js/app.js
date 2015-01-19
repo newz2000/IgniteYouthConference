@@ -6,29 +6,46 @@ var AppRouter = Backbone.Router.extend({
         '*default': 'home'
     },
     getEvent: function(id) {
-      console.log('Showing event '+id);
+      console.log('event');
+      var _template = _.template(
+        $('#eventTemplate').html()
+      );
+
+      // $('#dummyDom').html(_template( {
+      //   event: {
+      //     id: id
+      //   }
+      // }));
     },
+
     socialRoute: function() {
-      console.log('Showing social info');
+      var _template = _.template(
+        $('#socialTemplate').html()
+      );
+
+      $('#dummyDom').html(_template());
     },
+
     myEvents: function() {
-      console.log('Here are your events');
+      var _template = _.template(
+        $('#myEventsTemplate').html()
+      );
+
+      $('#dummyDom').html(_template());
     },
+
     home: function() {
-      console.log('You are home. Welcome!');
+      var _template = _.template(
+        $('#homeTemplate').html()
+      );
+
+      $('#dummyDom').html(_template());
     }
 
 });
 
 // Instantiate the router
 var app_router = new AppRouter;
-// app_router.on('route:getEvent', function (id) {
-//     // Note the variable in the route definition being passed in here
-//     alert( "Get event number " + id);   
-// });
-// app_router.on('route:home', function (actions) {
-//     alert( actions ); 
-// });
 
 // Start Backbone history a necessary step for bookmarkable URL's
 Backbone.history.start();
