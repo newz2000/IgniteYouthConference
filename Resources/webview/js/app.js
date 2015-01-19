@@ -6,11 +6,11 @@ var AppRouter = Backbone.Router.extend({
         '*default': 'home'
     },
     getEvent: function(id) {
-      var _template = _.template(
+      var template = Handlebars.compile(
         $('#eventTemplate').html()
       );
 
-      $('#dummyDom').html(_template( {
+      $('#dummyDom').html(template( {
         event: {
           id: id
         }
@@ -18,27 +18,27 @@ var AppRouter = Backbone.Router.extend({
     },
 
     socialRoute: function() {
-      var _template = _.template(
+      var template = Handlebars.compile(
         $('#socialTemplate').html()
       );
 
-      $('#dummyDom').html(_template());
+      $('#dummyDom').html(template());
     },
 
     myEvents: function() {
-      var _template = _.template(
+      var template = Handlebars.compile(
         $('#myEventsTemplate').html()
       );
 
-      $('#dummyDom').html(_template());
+      $('#dummyDom').html(template());
     },
 
     home: function() {
-      var _template = _.template(
+      var template = Handlebars.compile(
         $('#homeTemplate').html()
       );
 
-      $('#dummyDom').html(_template());
+      $('#dummyDom').html(template());
     }
 
 });
